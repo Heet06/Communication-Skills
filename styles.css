@@ -1,38 +1,60 @@
-@grid: 50x1 / 50vmin;
-    :container {
-      perspective: 23vmin;
-    }
-    background: @m(
-      @r(200, 240), 
-      radial-gradient(
-        @p(#00b8a9, #f8f3d4, #f6416c, #ffde7d) 15%,
-        transparent 50%
-      ) @r(100%) @r(100%) / @r(1%, 3%) @lr no-repeat
-    );
+html {
+  height: 100%;
+  overflow: hidden;
+}
 
-    @size: 80%;
-    @place-cell: center;
+body {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(#6084d7 25%, #a2cef4 50%, #a2cef4 50%, #6084d7 100%);
+}
 
-    border-radius: 50%;
-    transform-style: preserve-3d;
-    animation: scale-up 20s linear infinite;
-    animation-delay: calc(@i * -.4s);
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  perspective: 360px;
+  perspective-origin: 50% 50%;
+}
 
-    @keyframes scale-up {
-      0% {
-        opacity: 0;
-        transform: translate3d(0, 0, 0) rotate(0);
-      }
-      10% { 
-        opacity: 1; 
-      }
-      95% {
-        transform:
-          translate3d(0, 0, @r(50vmin, 55vmin))
-          rotate(@r(-360deg, 360deg));
-      }
-      100% {
-        opacity: 0;
-        transform: translate3d(0, 0, 1vmin);
-      }
-    }
+.top-plane, .bottom-plane {
+  width: 200%;
+  height: 130%;
+  position: absolute;
+  bottom: -30%;
+  left: -50%;
+  background-image: -webkit-linear-gradient(#a2cef4 2px, transparent 2px), -webkit-linear-gradient(left, #a2cef4 2px, transparent 2px);
+  background-size: 100px 100px,100px 100px;
+  background-position: -1px -1px,-1px -1px;
+  transform: rotateX(85deg);
+  animation: planeMoveTop 2s infinite linear;
+}
+
+.bottom-plane {
+  transform: rotateX(-85deg);
+  top: -30%;
+  animation: planeMoveBot 2s infinite linear;
+}
+
+@keyframes planeMoveTop {
+  from {
+    background-position: 0px -100px,0px 0px;
+  }
+  to {
+    background-position: 0px 0px, 100px 0px;
+  }
+}
+@keyframes planeMoveBot {
+  from {
+    background-position: 0px 0px,0px 0px;
+  }
+  to {
+    background-position: 0px -100px, 100px 0px;
+  }
+}
+@media (max-height: 350px) {
+  .wrap {
+    perspective: 210px;
+  }
+}

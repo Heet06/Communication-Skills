@@ -153,5 +153,7 @@ h1{
   border: 3px solid black;
   margin: 20px;
   padding: 20px;
-
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
 }

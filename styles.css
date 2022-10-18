@@ -145,3 +145,8 @@ body {
     transform: rotateX(70deg) translate3d(180px, 0px, -80px);
   }
 }
+h1{
+  text-align: center;
+  color: burlywood;
+  background-color: paleturquoise;
+}

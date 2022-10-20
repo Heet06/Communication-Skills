@@ -1,6 +1,151 @@
-body{
-    background-image: url(gif.mp4);
-    background-position: center;
+body, html
+{
+    height: 100%;
+}
+.bg{
+    background-image: url(images/IMG-20221014-WA0003[1].jpg);
+    height: 100%;
+    background-repeat: no-repeat;
     background-size: cover;
-    position: fixed;
+    background-attachment: fixed;
+    opacity: 1;
+}
+h2{
+    color: black;
+    opacity: 1;
+}
+h3
+{
+    color: black;
+    opacity: 1;
+}
+
+div
+{
+    background-color: lightskyblue;
+    padding: 4px;
+    margin: 20px;
+    font-family: Arial, Verdana, Times New Roman;
+    border: 3px solid white;
+    opacity: 0.5;
+}
+
+ul
+{
+    position:static;
+    width: 250px;
+    top: 90px;
+    left: 20px;
+    color: black;
+    background-color: aqua;
+    margin: 10px;
+    padding: 6px;
+    opacity: 1;
+    list-style: none;
+    border: 2px solid white;
+    padding: 20px;
+}
+ul li
+{
+    text-decoration: none;
+    opacity: 1;
+    margin: 20px;
+}
+ul li a
+{
+    color: black;
+    opacity: 1;
+    font-size: 30px;
+}
+#profile{
+    opacity:0.5;
+}
+h6, h5{
+    color: black;
+    opacity: 1;
+}
+img{
+    opacity: 1;
+}
+
+Table{
+    position: absolute;
+    top: 20%;
+    opacity: 0.5;
+    color: black;
+    margin-right: 15%;
+    margin-left: 15%;
+    width: 70%;
+}
+Table, td, tr, th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: lightskyblue;
+    color: black;
+    font-size: 30px;
+}
+h1{
+    text-align: center;
+    font-family: cursive;
+    font-style: bold;
+}
+#content{
+    color: black;
+    font-size: larger;
+    padding: 10px;
+}
+
+.title{
+    opacity: 1;
+    font-size: 30px;
+}
+.uses{
+    opacity: 1;
+    font-size: 30px;
+}
+.uses1{
+    opacity: 1;
+    font-size: 25px;
+}
+.examples{
+    opacity: 1;
+    font-size: 25px;
+}
+
+#main{
+    font-family: cursive;
+    font-weight: bolder;
+}
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0 , 0);
+
+body {
+  background: #fff;
+}
+
+.wrapper {
+  animation: scroll 70s linear infinite;
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
+  color: #eee;
+  height: 100vh;
+  min-width: 360px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  
+}
+
+@keyframes scroll {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll 200s linear infinite;
+  }
 }

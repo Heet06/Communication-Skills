@@ -133,6 +133,11 @@ h1{
     font-size: 25px;
 }
 
+.visual{
+    border: 10px solid white;
+    border-radius: 20px;
+}
+
 body {
   background: #fff;
 }

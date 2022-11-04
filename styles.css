@@ -71,7 +71,7 @@ img{
 
 Table{
     position: absolute;
-    top: 20%;
+    top: 30%;
     opacity: 0.5;
     color: black;
     margin-right: 15%;
@@ -85,6 +85,7 @@ Table, td, tr, th{
     background-color: lightskyblue;
     color: black;
     font-size: 30px;
+    height: 70px;
 }
 h1{
     text-align: center;
@@ -95,6 +96,7 @@ h1{
     color: black;
     font-size: larger;
     padding: 10px;
+    border-radius: 20px;
 }
 
 .title{
